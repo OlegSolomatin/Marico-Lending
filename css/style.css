@@ -628,6 +628,12 @@ main .container-info-step2 .container-button .primary-button {
   gap: 77rem;
   align-items: baseline;
 }
+@media screen and (max-width: 767.7px) {
+  .login form .item-form, .signup form .item-form {
+    flex-direction: column;
+    gap: 15rem;
+  }
+}
 .login form .item-form input, .signup form .item-form input {
   background: transparent;
   outline: none;
@@ -637,6 +643,11 @@ main .container-info-step2 .container-button .primary-button {
   width: 487rem;
   height: 46rem;
   color: var(--custom-white);
+}
+@media screen and (max-width: 767.7px) {
+  .login form .item-form input, .signup form .item-form input {
+    width: 80vw;
+  }
 }
 .login form .item-form input::placeholder, .signup form .item-form input::placeholder {
   font-size: var(--text-size-s);
@@ -672,6 +683,11 @@ main .container-info-step2 .container-button .primary-button {
 .login form button:hover, .signup form button:hover {
   cursor: pointer;
 }
+@media screen and (max-width: 767.7px) {
+  .login form button, .signup form button {
+    width: 80vw;
+  }
+}
 .login .container-social-authorize, .signup .container-social-authorize {
   display: flex;
   justify-content: space-between;
@@ -699,6 +715,14 @@ main .container-info-step2 .container-button .primary-button {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 767.7px) {
+  .login .container-social-authorize .item-authorize, .signup .container-social-authorize .item-authorize {
+    width: 20vw;
+  }
+  .login .container-social-authorize .item-authorize span, .signup .container-social-authorize .item-authorize span {
+    display: none;
+  }
+}
 .login .text-content, .signup .text-content {
   margin-top: 69rem;
   font-size: var(--text-size-sxx);
@@ -719,6 +743,11 @@ main .container-info-step2 .container-button .primary-button {
   color: var(--custom-white);
   margin: 126rem 0 123rem;
 }
+@media screen and (max-width: 767.7px) {
+  .pricing h1 {
+    margin: 25rem 0;
+  }
+}
 .pricing .container-pricing {
   width: 100%;
   display: flex;
@@ -726,11 +755,23 @@ main .container-info-step2 .container-button .primary-button {
   justify-content: space-between;
   margin-bottom: 189rem;
 }
+@media screen and (max-width: 767.7px) {
+  .pricing .container-pricing {
+    margin-bottom: 50rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .pricing .item-pricing {
   border-radius: var(--border-radius);
   border: 1rem solid var(--custom-gray-500);
   padding: 38rem 34rem 36rem 39rem;
   background: var(--custom-gray-600);
+}
+@media screen and (max-width: 767.7px) {
+  .pricing .item-pricing {
+    padding: 19rem 17rem 18rem 19rem;
+  }
 }
 .pricing .item-pricing header {
   display: flex;
@@ -757,6 +798,11 @@ main .container-info-step2 .container-button .primary-button {
 }
 .pricing .item-pricing main div {
   margin-bottom: 67rem;
+}
+@media screen and (max-width: 767.7px) {
+  .pricing .item-pricing main div {
+    margin-bottom: 15rem;
+  }
 }
 .pricing .item-pricing main div h3 {
   font-weight: 700;
@@ -794,6 +840,11 @@ main .container-info-step2 .container-button .primary-button {
   margin-bottom: 53rem;
   display: block;
 }
+@media screen and (max-width: 767.7px) {
+  .pricing .item-pricing main .pricing-text-content {
+    margin-bottom: 25rem;
+  }
+}
 .pricing .item-pricing main ul {
   margin-top: 18rem;
   display: flex;
@@ -824,6 +875,11 @@ main .container-info-step2 .container-button .primary-button {
   width: 100%;
   margin-top: 80rem;
 }
+@media screen and (max-width: 767.7px) {
+  .pricing .item-pricing footer {
+    margin-top: 25rem;
+  }
+}
 .pricing .item-pricing footer a {
   width: 100%;
   text-align: center;
@@ -853,6 +909,11 @@ main .container-info-step2 .container-button .primary-button {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media screen and (max-width: 767.7px) {
+  .about {
+    padding-top: 25rem;
+  }
 }
 .about .container-logo {
   margin-bottom: 48rem;
@@ -890,12 +951,24 @@ main .container-info-step2 .container-button .primary-button {
   margin-bottom: 186rem;
   text-align: center;
 }
+@media screen and (max-width: 767.7px) {
+  .about .caption {
+    margin-bottom: 50rem;
+  }
+}
 .about .container-text-content {
   width: 1252rem;
   margin: auto;
   padding: 0 87rem;
   border-bottom: 1px solid var(--custom-gray-500);
   margin-bottom: 188rem;
+}
+@media screen and (max-width: 767.7px) {
+  .about .container-text-content {
+    width: 80vw;
+    margin: 0 auto 50rem;
+    padding: 0 5rem;
+  }
 }
 .about .text-content {
   font-size: var(--text-size-xxs);
@@ -915,6 +988,13 @@ main .container-info-step2 .container-button .primary-button {
   display: flex;
   gap: 140rem;
   margin-bottom: 190rem;
+}
+@media screen and (max-width: 767.7px) {
+  .about .container-creators {
+    gap: 20rem;
+    flex-direction: column;
+    margin-bottom: 50rem;
+  }
 }
 .about .container-creators figure {
   display: flex;
@@ -978,12 +1058,23 @@ main .container-info-step2 .container-button .primary-button {
   line-height: 1.5;
   color: var(--custom-white);
 }
+@media screen and (max-width: 767.7px) {
+  .usecase h1 {
+    margin-top: 48rem;
+  }
+}
 .usecase .subtitle {
   color: var(--custom-white);
   font-weight: 400;
   font-size: var(--text-size-mx);
   line-height: 1.5;
   margin-bottom: 130rem;
+  text-align: center;
+}
+@media screen and (max-width: 767.7px) {
+  .usecase .subtitle {
+    margin-bottom: 30rem;
+  }
 }
 .usecase .container-sources {
   display: grid;
@@ -991,11 +1082,22 @@ main .container-info-step2 .container-button .primary-button {
   gap: 24rem;
   margin-bottom: 188rem;
 }
+@media screen and (max-width: 767.7px) {
+  .usecase .container-sources {
+    grid-template-columns: 1fr;
+    margin-bottom: 50rem;
+  }
+}
 .usecase .container-sources .item-sources {
   width: 402rem;
   padding: 35rem 18rem 16rem 28rem;
   border-radius: var(--border-radius);
   border: 1px solid var(--custom-gray-500);
+}
+@media screen and (max-width: 767.7px) {
+  .usecase .container-sources .item-sources {
+    width: 80vw;
+  }
 }
 .usecase .container-sources .item-sources svg {
   width: 50rem;
@@ -1024,23 +1126,23 @@ main .container-info-step2 .container-button .primary-button {
   .container-creators figure {
     margin: 0 70rem;
   }
+  .item-form label {
+    margin: 0 12rem;
+  }
+  @media screen and (max-width: 767.7px) {
+    .item-form label {
+      margin: 12rem 0;
+    }
+  }
   .container-sources {
     max-width: 1255rem;
     width: 100%;
   }
   .container-sources .item-sources {
+    display: inline;
     width: calc(33% - 12rem);
     margin: 12rem;
   }
 }
-/*@media screen and (max-width: 767.7px){
-  html{
-    font-size: 0.05208333333333333333333333333333vh;
-  }
-  .container-layout{
-    padding: 49rem 60rem;
-  }
-
-}*/
 
 /*# sourceMappingURL=style.css.map */

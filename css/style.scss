@@ -573,6 +573,10 @@ main {
       display: flex;
       gap: 77rem;
       align-items: baseline;
+      @media screen and (max-width:767.7px){
+        flex-direction: column;
+        gap: 15rem;
+      }
       input{
         background: transparent;
         outline: none;
@@ -582,6 +586,9 @@ main {
         width: 487rem;
         height: 46rem;
         color: var(--custom-white);
+        @media screen and (max-width:767.7px){
+          width: 80vw;
+        }
         &::placeholder{
           font-size: var(--text-size-s);
           color: var(--custom-gray-400);
@@ -611,6 +618,9 @@ main {
       &:hover{
         cursor: pointer;
       }
+      @media screen and (max-width:767.7px){
+        width: 80vw;
+      }
     }
   }
   .container-social-authorize{
@@ -632,6 +642,13 @@ main {
           height: 100%;
         }
       }
+      @media screen and (max-width:767.7px){
+        width: 20vw;
+        span{
+          display: none;
+        }
+      }
+
     }
   }
   .text-content{
@@ -654,6 +671,9 @@ main {
     font-weight: 600;
     color: var(--custom-white);
     margin: 126rem 0 123rem;
+    @media screen and (max-width:767.7px){
+      margin: 25rem 0;
+    }
   }
   .container-pricing{
     width: 100%;
@@ -661,12 +681,20 @@ main {
     gap: 38rem;
     justify-content: space-between;
     margin-bottom: 189rem;
+    @media screen and (max-width:767.7px){
+      margin-bottom: 50rem;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
   .item-pricing{
     border-radius: var(--border-radius);
     border: 1rem solid var(--custom-gray-500);
     padding: 38rem 34rem 36rem 39rem;
     background: var(--custom-gray-600);
+    @media screen and (max-width:767.7px){
+      padding: 19rem 17rem 18rem 19rem;
+    }
     header{
       display: flex;
       flex-direction: column;
@@ -691,6 +719,9 @@ main {
       display: block;
       div{
         margin-bottom: 67rem;
+        @media screen and (max-width:767.7px){
+          margin-bottom: 15rem;
+        }
         h3{
           font-weight: 700;
           font-size: var(--text-size-xl);
@@ -727,6 +758,9 @@ main {
         font-size: var(--text-size-s);
         margin-bottom: 53rem;
         display: block;
+        @media screen and (max-width: 767.7px){
+          margin-bottom: 25rem;
+        }
       }
       ul{
         margin-top: 18rem;
@@ -758,6 +792,9 @@ main {
     footer{
       width: 100%;
       margin-top: 80rem;
+      @media screen and (max-width:767.7px){
+        margin-top: 25rem;
+      }
       a{
         width: 100%;
         text-align: center;
@@ -788,6 +825,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (max-width:767.7px){
+    padding-top: 25rem;
+  }
 
   .container-logo{
     margin-bottom: 48rem;
@@ -826,7 +867,9 @@ main {
     line-height: 1.5;
     margin-bottom: 186rem;
     text-align: center;
-
+    @media screen and (max-width:767.7px){
+      margin-bottom: 50rem;
+    }
   }
   .container-text-content{
     width: 1252rem;
@@ -834,6 +877,11 @@ main {
     padding: 0 87rem;
     border-bottom: 1px solid var(--custom-gray-500);
     margin-bottom: 188rem;
+    @media screen and (max-width:767.7px){
+      width: 80vw;
+      margin:0 auto 50rem;
+      padding: 0 5rem;
+    }
   }
   .text-content{
     font-size: var(--text-size-xxs);
@@ -853,6 +901,11 @@ main {
     display: flex;
     gap: 140rem;
     margin-bottom: 190rem;
+    @media screen and (max-width:767.7px){
+      gap: 20rem;
+      flex-direction: column;
+      margin-bottom: 50rem;
+    }
     figure{
       display: flex;
       flex-direction: column;
@@ -915,6 +968,9 @@ main {
     font-weight: 600;
     line-height: 1.5;
     color: var(--custom-white);
+    @media screen and (max-width:767.7px){
+      margin-top: 48rem;
+    }
   }
   .subtitle{
     color: var(--custom-white);
@@ -922,17 +978,28 @@ main {
     font-size: var(--text-size-mx);
     line-height: 1.5;
     margin-bottom: 130rem;
+    text-align: center;
+    @media screen and (max-width:767.7px){
+      margin-bottom: 30rem;
+    }
   }
   .container-sources{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 24rem;
     margin-bottom: 188rem;
+    @media screen and (max-width:767.7px){
+      grid-template-columns: 1fr;
+      margin-bottom: 50rem;
+    }
     .item-sources{
       width: 402rem;
       padding: 35rem 18rem 16rem 28rem;
       border-radius: var(--border-radius);
       border: 1px solid var(--custom-gray-500);
+      @media screen and (max-width:767.7px){
+        width: 80vw;
+      }
       svg{
         width: 50rem;
         height: 50rem;
@@ -968,22 +1035,21 @@ main {
       margin: 0 70rem;
     }
   }
+  .item-form{
+    label{
+      margin: 0 12rem;
+      @media screen and (max-width:767.7px){
+        margin: 12rem 0;
+      }
+    }
+  }
   .container-sources{
     max-width: 1255rem;
     width: 100%;
     .item-sources{
+      display: inline;
       width: calc(33% - 12rem);
       margin: 12rem;
     }
   }
 }
-
-/*@media screen and (max-width: 767.7px){
-  html{
-    font-size: 0.05208333333333333333333333333333vh;
-  }
-  .container-layout{
-    padding: 49rem 60rem;
-  }
-  
-}*/
