@@ -7,9 +7,22 @@ footer .container-footer-brand {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 767.7px) {
+  footer .container-footer-brand {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
 footer .container-footer-brand .container-logo-title {
   display: flex;
   gap: 12rem;
+}
+@media screen and (max-width: 767.7px) {
+  footer .container-footer-brand .container-logo-title {
+    align-items: center;
+  }
 }
 footer .container-footer-brand .container-logo-title .container-logo {
   width: 50rem;
@@ -29,6 +42,11 @@ footer .container-footer-brand .container-mail a {
   font-weight: 400;
   font-size: var(--text-size-xs);
   color: var(--custom-gray-500);
+}
+@media screen and (max-width: 767.7px) {
+  footer .container-nav-footer {
+    display: none;
+  }
 }
 footer .container-nav-footer .list-header {
   display: flex;

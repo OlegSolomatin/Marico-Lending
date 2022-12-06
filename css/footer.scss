@@ -6,10 +6,20 @@ footer{
   .container-footer-brand{
     display: flex;
     flex-direction: column;
+    @media screen and (max-width:767.7px){
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
 
     .container-logo-title{
       display: flex;
       gap: 12rem;
+
+      @media screen and (max-width:767.7px){
+        align-items: center;
+      }
       .container-logo{
         width: 50rem;
         height: 50rem;
@@ -35,6 +45,9 @@ footer{
   }
 
   .container-nav-footer{
+    @media screen and (max-width:767.7px){
+      display: none;
+    }
     .list-header{
       display: flex;
       gap: 16rem;

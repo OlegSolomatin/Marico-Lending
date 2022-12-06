@@ -3,11 +3,17 @@ header{
  justify-content: space-between;
  height: fit-content;
  align-items: center;
+ @media screen and (max-width:767.7px){
+  flex-wrap: wrap;
+ }
 }
 .container-logo {
  display: flex;
  align-items: center;
  gap: 8.5rem;
+ @media screen and (max-width:767.7px){
+  flex-grow: 1;
+ }
 
  .container-brand {
   height: fit-content;
@@ -29,10 +35,19 @@ header{
   }
  }
 }
+
 .container-nav-header{
+ @media screen and (max-width:767.7px){
+  order: 1;
+  flex-grow: 2;
+ }
  .list-header{
   display: flex;
   gap: 16rem;
+  @media screen and (max-width:767.7px){
+   justify-content: space-evenly;
+   margin-top: 15rem;
+  }
 
   .list-header--item{
    font-size: var(--text-size-sx);
@@ -50,6 +65,13 @@ header{
     cursor: pointer;
    }
   }
+ }
+}
+
+@media screen and (max-width:767.7px){
+ .container-button{
+  flex-grow: 1;
+  justify-content: flex-end;
  }
 }
 

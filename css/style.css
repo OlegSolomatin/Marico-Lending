@@ -2,19 +2,19 @@
 @import 'header.css';
 @import 'footer.css';
 :root {
-  --text-size-sxx: 16rem;
-  --text-size-sx: 20rem;
-  --text-size-s: 22rem;
-  --text-size-xs: 25rem;
-  --text-size-xxs: 28rem;
-  --text-size-mx: 30rem;
-  --text-size-m: 35rem;
-  --text-size-xm: 38rem;
-  --text-size-lxx: 42rem;
-  --text-size-lx: 50rem;
-  --text-size-l: 62rem;
-  --text-size-xl: 75rem;
-  --text-size-xxl: 100rem;
+  --text-size-sxx: var(--text-sxx);
+  --text-size-sx: var(--text-sx);
+  --text-size-s: var(--text-s);
+  --text-size-xs: var(--text-xs);
+  --text-size-xxs: var(--text-xxs);
+  --text-size-mx: var(--text-mx);
+  --text-size-m: var(--text-m);
+  --text-size-xm: var(--text-xm);
+  --text-size-lxx: var(--text-lxx);
+  --text-size-lx: var(--text-lx);
+  --text-size-l: var(--text-l);
+  --text-size-xl: var(--text-xl);
+  --text-size-xxl: var(--text-xxl);
   --custom-black: #000000;
   --custom-white: #ffffff;
   --custom-gray-300: #B4B1B1;
@@ -32,6 +32,23 @@
   --custom-green-500-24: #145818;
   --custom-gradient: linear-gradient(90deg, #FE6783 1.9%, #FFBF84 97.1%);
   --border-radius: 20rem;
+}
+@media screen and (max-width: 767.7px) {
+  :root {
+    --text-size-sxx: var(--text-mobile-sxx);
+    --text-size-sx: var(--text-mobile-sx);
+    --text-size-s: var(--text-mobile-s);
+    --text-size-xs: var(--text-mobile-xs);
+    --text-size-xxs: var(--text-mobile-xxs);
+    --text-size-mx: var(--text-mobile-mx);
+    --text-size-m: var(--text-mobile-m);
+    --text-size-xm: var(--text-mobile-xm);
+    --text-size-lxx: var(--text-mobile-lxx);
+    --text-size-lx: var(--text-mobile-lx);
+    --text-size-l: var(--text-mobile-l);
+    --text-size-xl: var(--text-mobile-xl);
+    --text-size-xxl: var(--text-mobile-xxl);
+  }
 }
 
 * {
@@ -69,8 +86,39 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 }
 
 html {
+  --text-sxx: 16rem;
+  --text-sx: 20rem;
+  --text-s: 22rem;
+  --text-xs: 25rem;
+  --text-xxs: 28rem;
+  --text-mx: 30rem;
+  --text-m: 35rem;
+  --text-xm: 38rem;
+  --text-lxx: 42rem;
+  --text-lx: 50rem;
+  --text-l: 62rem;
+  --text-xl: 75rem;
+  --text-xxl: 100rem;
+  --text-mobile-sxx: 8px;
+  --text-mobile-sx: 10px;
+  --text-mobile-s: 11px;
+  --text-mobile-xs: 13px;
+  --text-mobile-xxs: 14px;
+  --text-mobile-mx: 15px;
+  --text-mobile-m: 17px;
+  --text-mobile-xm: 19px;
+  --text-mobile-lxx: 21px;
+  --text-mobile-lx: 25px;
+  --text-mobile-l: 31px;
+  --text-mobile-xl: 32px;
+  --text-mobile-xxl: 50px;
   font-size: 0.0520833333vw;
   overflow-x: hidden;
+}
+@media screen and (max-width: 767.7px) {
+  html {
+    font-size: 1px;
+  }
 }
 
 body {
@@ -84,11 +132,13 @@ body {
   padding: 49rem 140rem;
   overflow: hidden;
 }
+@media screen and (max-width: 767.7px) {
+  .container-layout {
+    padding: 49rem 40rem;
+  }
+}
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 128rem;
 }
 main h1 {
@@ -113,6 +163,11 @@ main .container-content {
   flex-direction: column;
   align-items: center;
   margin-bottom: 188rem;
+}
+@media screen and (max-width: 767.7px) {
+  main .container-content {
+    margin-bottom: 70rem;
+  }
 }
 main .container-content h3 {
   font-size: var(--text-size-xl);
@@ -169,6 +224,12 @@ main .container-content .container-button .default-button {
   border: 2rem solid var(--custom-gray-500);
   background: transparent;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-content .container-button {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 main .container-content .container-counters .counters-item {
   font-size: var(--text-size-xs);
   font-weight: 400;
@@ -190,6 +251,13 @@ main .container-content .container-counters .counters-item:before {
   background: var(--custom-green-500);
   border: 6.5rem solid var(--custom-green-500-24);
 }
+@media screen and (max-width: 767.7px) {
+  main .container-content .container-counters .counters-item:before {
+    top: -3.5rem;
+    width: 10.5rem;
+    height: 10.5rem;
+  }
+}
 main .container-content .container-features {
   display: flex;
   justify-content: space-between;
@@ -197,12 +265,24 @@ main .container-content .container-features {
   width: 100%;
   max-width: 1483rem;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-content .container-features {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 main .container-content .container-features .container-features-items {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5rem;
   width: 33.3%;
+}
+@media screen and (max-width: 767.7px) {
+  main .container-content .container-features .container-features-items {
+    width: 100%;
+  }
 }
 main .container-content .container-features .container-features-items .features-items-header {
   display: flex;
@@ -255,13 +335,24 @@ main .container-content .container-img-preview {
   margin-bottom: 188rem;
   width: 100%;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-content .container-img-preview {
+    margin-bottom: 50rem;
+  }
+}
 main .container-content .container-img-preview img {
   width: 100%;
   height: 441rem;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-content .container-img-preview img {
+    height: 150rem;
+  }
+}
 main .container-avatar {
   width: 100vw;
   height: 800rem;
+  transform: translateX(-140rem);
   position: relative;
   display: flex;
   align-items: center;
@@ -269,13 +360,30 @@ main .container-avatar {
   background: url("../assets/Image-5.png");
   background-size: cover;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-avatar {
+    height: 300rem;
+    transform: translateX(-40rem);
+  }
+}
 main aside {
   width: 100vw;
   display: flex;
   height: fit-content;
 }
+@media screen and (max-width: 767.7px) {
+  main aside {
+    width: 100%;
+    margin-bottom: 50rem;
+  }
+}
 main aside .info-text-content {
   width: 50%;
+}
+@media screen and (max-width: 767.7px) {
+  main aside .info-text-content {
+    width: 100%;
+  }
 }
 main aside .info-text-content .subTitle {
   font-weight: 500;
@@ -314,7 +422,9 @@ main aside .info-text-content .option-list li:first-child:before {
   left: -45rem;
   background: var(--custom-gray-700);
   border-radius: 50%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 main aside .info-text-content .option-list li:last-child {
   font-size: var(--text-size-s);
@@ -335,6 +445,7 @@ main aside .info-text-content .option-list li:last-child:before {
 }
 main aside .info-text-content .container-button {
   gap: 12rem;
+  justify-content: center;
 }
 main aside .info-text-content .container-button .primary-button {
   padding: 17rem 21rem;
@@ -358,6 +469,11 @@ main aside .container-img {
   width: 50%;
   height: fit-content;
 }
+@media screen and (max-width: 767.7px) {
+  main aside .container-img {
+    display: none;
+  }
+}
 main aside .container-img img {
   width: 100%;
   height: 715rem;
@@ -370,6 +486,11 @@ main .container-info-step2 {
   margin-bottom: 189rem;
   justify-content: center;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-info-step2 {
+    margin-bottom: 50rem;
+  }
+}
 main .container-info-step2 section {
   width: calc(50% - 11.5rem);
   height: 666rem;
@@ -378,6 +499,13 @@ main .container-info-step2 section {
   padding: 33rem 0 0 50rem;
   background: var(--custom-gray-900);
   overflow: hidden;
+}
+@media screen and (max-width: 767.7px) {
+  main .container-info-step2 section {
+    width: 100%;
+    padding: 15rem 0 0 15rem;
+    height: fit-content;
+  }
 }
 main .container-info-step2 section span {
   font-size: var(--text-size-m);
@@ -403,6 +531,11 @@ main .container-info-step2 section p span {
 main .container-info-step2 section div {
   overflow: hidden;
 }
+@media screen and (max-width: 767.7px) {
+  main .container-info-step2 section div {
+    display: none;
+  }
+}
 main .container-info-step2 section div .section-image-phone {
   width: 787rem;
   height: 338rem;
@@ -410,6 +543,7 @@ main .container-info-step2 section div .section-image-phone {
 }
 main .container-info-step2 .container-button {
   margin-top: 49rem;
+  justify-content: center;
 }
 main .container-info-step2 .container-button .primary-button {
   padding: 22rem 85rem;
@@ -577,6 +711,7 @@ main .container-info-step2 .container-button .primary-button {
 
 .pricing {
   width: 100%;
+  padding-top: 0;
 }
 .pricing h1 {
   font-size: var(--text-size-lx);
@@ -618,6 +753,7 @@ main .container-info-step2 .container-button .primary-button {
 .pricing .item-pricing main {
   margin-top: 14rem;
   padding: 0;
+  display: block;
 }
 .pricing .item-pricing main div {
   margin-bottom: 67rem;
@@ -826,6 +962,10 @@ main .container-info-step2 .container-button .primary-button {
   color: var(--custom-blue-500);
 }
 
+.usecase-container {
+  padding-top: 0;
+}
+
 .usecase {
   display: flex;
   flex-direction: column;
@@ -884,6 +1024,23 @@ main .container-info-step2 .container-button .primary-button {
   .container-creators figure {
     margin: 0 70rem;
   }
+  .container-sources {
+    max-width: 1255rem;
+    width: 100%;
+  }
+  .container-sources .item-sources {
+    width: calc(33% - 12rem);
+    margin: 12rem;
+  }
 }
+/*@media screen and (max-width: 767.7px){
+  html{
+    font-size: 0.05208333333333333333333333333333vh;
+  }
+  .container-layout{
+    padding: 49rem 60rem;
+  }
+
+}*/
 
 /*# sourceMappingURL=style.css.map */

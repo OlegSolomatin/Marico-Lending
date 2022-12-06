@@ -13,19 +13,35 @@
 }
 
 :root {
-  --text-size-sxx: 16rem;
-  --text-size-sx: 20rem;
-  --text-size-s: 22rem;
-  --text-size-xs: 25rem;
-  --text-size-xxs: 28rem;
-  --text-size-mx: 30rem;
-  --text-size-m: 35rem;
-  --text-size-xm: 38rem;
-  --text-size-lxx: 42rem;
-  --text-size-lx: 50rem;
-  --text-size-l: 62rem;
-  --text-size-xl: 75rem;
-  --text-size-xxl: 100rem;
+  --text-size-sxx: var(--text-sxx);
+  --text-size-sx: var(--text-sx);
+  --text-size-s: var(--text-s);
+  --text-size-xs: var(--text-xs);
+  --text-size-xxs: var(--text-xxs);
+  --text-size-mx: var(--text-mx);
+  --text-size-m: var(--text-m);
+  --text-size-xm: var(--text-xm);
+  --text-size-lxx: var(--text-lxx);
+  --text-size-lx: var(--text-lx);
+  --text-size-l: var(--text-l);
+  --text-size-xl: var(--text-xl);
+  --text-size-xxl: var(--text-xxl);
+
+  @media screen and (max-width:767.7px) {
+    --text-size-sxx: var(--text-mobile-sxx);
+    --text-size-sx: var(--text-mobile-sx);
+    --text-size-s: var(--text-mobile-s);
+    --text-size-xs: var(--text-mobile-xs);
+    --text-size-xxs: var(--text-mobile-xxs);
+    --text-size-mx: var(--text-mobile-mx);
+    --text-size-m: var(--text-mobile-m);
+    --text-size-xm: var(--text-mobile-xm);
+    --text-size-lxx: var(--text-mobile-lxx);
+    --text-size-lx: var(--text-mobile-lx);
+    --text-size-l: var(--text-mobile-l);
+    --text-size-xl: var(--text-mobile-xl);
+    --text-size-xxl: var(--text-mobile-xxl);
+  }
 
   --custom-black: #000000;
   --custom-white: #ffffff;
@@ -77,7 +93,38 @@ h1::after, h2::after, h3::after, h4::after, h5::after, h6::after {
 }
 
 html{
+  --text-sxx: 16rem;
+  --text-sx: 20rem;
+  --text-s: 22rem;
+  --text-xs: 25rem;
+  --text-xxs: 28rem;
+  --text-mx: 30rem;
+  --text-m: 35rem;
+  --text-xm: 38rem;
+  --text-lxx: 42rem;
+  --text-lx: 50rem;
+  --text-l: 62rem;
+  --text-xl: 75rem;
+  --text-xxl: 100rem;
+
+  --text-mobile-sxx: 8px;
+  --text-mobile-sx: 10px;
+  --text-mobile-s: 11px;
+  --text-mobile-xs: 13px;
+  --text-mobile-xxs: 14px;
+  --text-mobile-mx: 15px;
+  --text-mobile-m: 17px;
+  --text-mobile-xm: 19px;
+  --text-mobile-lxx: 21px;
+  --text-mobile-lx: 25px;
+  --text-mobile-l: 31px;
+  --text-mobile-xl: 32px;
+  --text-mobile-xxl: 50px;
+
   font-size: 0.05208333333333333333333333333333vw;
+  @media screen and (max-width:767.7px){
+    font-size: 1px;
+  }
   overflow-x: hidden;
 }
 
@@ -91,12 +138,12 @@ body{
 .container-layout{
   padding: 49rem 140rem;
   overflow: hidden;
+  @media screen and (max-width:767.7px) {
+    padding: 49rem 40rem;
+  }
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding-top: 128rem;
   h1{
     font-size: var(--text-size-xxl);
@@ -120,6 +167,10 @@ main {
     flex-direction: column;
     align-items: center;
     margin-bottom: 188rem;
+
+    @media screen and (max-width:767.7px){
+      margin-bottom: 70rem;
+    }
     h3{
       font-size: var(--text-size-xl);
       color: var(--custom-white);
@@ -162,6 +213,11 @@ main {
       .default-button{
         @include button( 24rem, 90rem, var(--custom-gray-500), var(--text-size-sx), 500, var(--border-radius), 2rem, var(--custom-gray-500), transparent)
       }
+
+      @media screen and (max-width:767.7px){
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
     .container-counters{
       .counters-item{
@@ -184,6 +240,12 @@ main {
           border-radius: 50%;
           background: var(--custom-green-500);
           border: 6.5rem solid var(--custom-green-500-24);
+
+          @media screen and (max-width:767.7px){
+            top: -3.5rem;
+            width: 10.5rem;
+            height: 10.5rem;
+          }
         }
       }
     }
@@ -194,12 +256,21 @@ main {
       width: 100%;
       max-width: 1483rem;
 
+      @media screen and (max-width:767.7px){
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+      }
+
       .container-features-items{
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5rem;
         width: 33.3%;
+        @media screen and (max-width:767.7px){
+          width: 100%;
+        }
 
         .features-items-header{
           display: flex;
@@ -252,28 +323,47 @@ main {
       margin-top: 52rem;
       margin-bottom: 188rem;
       width: 100%;
+      @media screen and (max-width:767.7px){
+        margin-bottom: 50rem;
+      }
       img{
         width:100%;
         height: 441rem;
+        @media screen and (max-width:767.7px) {
+          height: 150rem;
+        }
       }
     }
   }
   .container-avatar{
     width: 100vw;
     height: 800rem;
+    transform: translateX(-140rem);
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     background: url("../assets/Image-5.png");
     background-size: cover;
+    @media screen and (max-width:767.7px){
+      height: 300rem;
+      transform: translateX(-40rem);
+    }
   }
   aside{
     width: 100vw;
     display: flex;
     height: fit-content;
+    @media screen and (max-width:767.7px){
+      width: 100%;
+      margin-bottom: 50rem;
+    }
     .info-text-content{
       width: 50%;
+
+      @media screen and (max-width:767.7px){
+        width: 100%;
+      }
       .subTitle{
         font-weight: 500;
         color: var(--custom-white);
@@ -310,7 +400,9 @@ main {
               left: -45rem;
               background: var(--custom-gray-700);
               border-radius: 50%;
-              text-align: center;
+              display: flex;
+              align-items: center;
+              justify-content: center;
             }
           }
           &:last-child{
@@ -334,6 +426,7 @@ main {
       }
       .container-button{
         gap: 12rem;
+        justify-content: center;
         .primary-button{
           @include button(17rem, 21rem, var(--custom-white), var(--text-size-sx), 500, var(--border-radius), 0, none, var(--custom-blue-600));
         }
@@ -345,6 +438,10 @@ main {
     .container-img{
       width: 50%;
       height: fit-content;
+
+      @media screen and (max-width:767.7px){
+        display: none;
+      }
       img{
         width: 100%;
         height: 715rem;
@@ -358,6 +455,9 @@ main {
     width: 100%;
     margin-bottom: 189rem;
     justify-content: center;
+    @media screen and (max-width:767.7px){
+      margin-bottom: 50rem;
+    }
     section{
       width: calc(50% - 11.5rem);
       height: 666rem;
@@ -366,6 +466,11 @@ main {
       padding: 33rem 0 0 50rem;
       background: var(--custom-gray-900);
       overflow: hidden;
+      @media screen and (max-width:767.7px) {
+        width: 100%;
+        padding: 15rem 0 0 15rem;
+        height: fit-content;
+      }
       span{
         font-size: var(--text-size-m);
         line-height: 1.5;
@@ -389,6 +494,9 @@ main {
       }
       div{
         overflow: hidden;
+        @media screen and (max-width:767.7px){
+          display: none;
+        }
         .section-image-phone{
           width: 787rem;
           height: 338rem;
@@ -398,6 +506,7 @@ main {
     }
     .container-button{
       margin-top: 49rem;
+      justify-content: center;
       .primary-button{
         @include button(22rem, 85rem, var(--custom-white), var(--text-size-sx), 500, var(--border-radius), 0, none, var(--custom-blue-500))
       }
@@ -538,6 +647,8 @@ main {
 
 .pricing{
   width: 100%;
+  padding-top: 0;
+
   h1{
     font-size: var(--text-size-lx);
     font-weight: 600;
@@ -577,6 +688,7 @@ main {
     main{
       margin-top: 14rem;
       padding: 0;
+      display: block;
       div{
         margin-bottom: 67rem;
         h3{
@@ -790,6 +902,9 @@ main {
   }
 }
 
+.usecase-container{
+  padding-top: 0;
+}
 .usecase{
   display: flex;
   flex-direction: column;
@@ -853,4 +968,22 @@ main {
       margin: 0 70rem;
     }
   }
+  .container-sources{
+    max-width: 1255rem;
+    width: 100%;
+    .item-sources{
+      width: calc(33% - 12rem);
+      margin: 12rem;
+    }
+  }
 }
+
+/*@media screen and (max-width: 767.7px){
+  html{
+    font-size: 0.05208333333333333333333333333333vh;
+  }
+  .container-layout{
+    padding: 49rem 60rem;
+  }
+  
+}*/
