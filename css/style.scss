@@ -658,3 +658,11 @@ main {
     }
   }
 }
+
+@supports not (gap: 0rem) {
+  .container-button{
+    button{
+      margin: 0 12rem;
+    }
+  }
+}

@@ -700,4 +700,10 @@ main .container-info-step2 .container-button .primary-button {
   color: var(--custom-blue-500);
 }
 
+@supports not (gap: 0rem) {
+  .container-button button {
+    margin: 0 12rem;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */

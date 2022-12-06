@@ -11,7 +11,6 @@ header{
 
  .container-brand {
   height: fit-content;
-
   p {
    text-transform: capitalize;
    font-size: var(--text-size-xm);
@@ -51,6 +50,15 @@ header{
     cursor: pointer;
    }
   }
+ }
+}
+
+@supports not (gap: 0rem) {
+ .container-logo-svg{
+  margin-right: 8.5rem;
+ }
+ .list-header--item{
+  padding: 0 8rem;
  }
 }
 

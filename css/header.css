@@ -50,4 +50,13 @@ header {
   cursor: pointer;
 }
 
+@supports not (gap: 0rem) {
+  .container-logo-svg {
+    margin-right: 8.5rem;
+  }
+  .list-header--item {
+    padding: 0 8rem;
+  }
+}
+
 /*# sourceMappingURL=header.css.map */
