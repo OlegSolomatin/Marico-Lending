@@ -39,6 +39,12 @@ header {
   font-weight: 500;
   transition: all 0.2ms;
 }
+.container-nav-header .list-header .list-header--item-active {
+  font-size: var(--text-size-sx);
+  transition: all 0.2ms;
+  color: var(--custom-blue-500);
+  font-weight: 500;
+}
 .container-nav-header .list-header .list-header--item:hover {
   color: var(--custom-blue-500);
   cursor: pointer;

@@ -17,8 +17,10 @@
   --text-size-xxl: 100rem;
   --custom-black: #000000;
   --custom-white: #ffffff;
+  --custom-gray-300: #B4B1B1;
   --custom-gray-400: #919191;
   --custom-gray-500: #707070;
+  --custom-gray-600: #131313;
   --custom-gray-700: #2D2D2D;
   --custom-gray-800: #0e0e0e;
   --custom-gray-900: #0D0D0D;
@@ -29,7 +31,7 @@
   --custom-green-500: #0FC65C;
   --custom-green-500-24: #145818;
   --custom-gradient: linear-gradient(90deg, #FE6783 1.9%, #FFBF84 97.1%);
-  --border-radius: 15rem;
+  --border-radius: 20rem;
 }
 
 * {
@@ -568,6 +570,133 @@ main .container-info-step2 .container-button .primary-button {
   color: var(--custom-white);
 }
 .login .text-content a, .signup .text-content a {
+  color: var(--custom-blue-500);
+}
+
+.pricing {
+  width: 100%;
+}
+.pricing h1 {
+  font-size: var(--text-size-lx);
+  font-weight: 600;
+  color: var(--custom-white);
+  margin: 126rem 0 123rem;
+}
+.pricing .container-pricing {
+  width: 100%;
+  display: flex;
+  gap: 38rem;
+  justify-content: space-between;
+  margin-bottom: 189rem;
+}
+.pricing .item-pricing {
+  border-radius: var(--border-radius);
+  border: 1rem solid var(--custom-gray-500);
+  padding: 38rem 34rem 36rem 39rem;
+  background: var(--custom-gray-600);
+}
+.pricing .item-pricing header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.pricing .item-pricing header h2 {
+  font-size: var(--text-size-lx);
+  font-weight: 600;
+  color: var(--custom-white);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+.pricing .item-pricing header p {
+  font-size: var(--text-size-xxs);
+  line-height: 1.5;
+  color: var(--custom-gray-300);
+  font-weight: 400;
+}
+.pricing .item-pricing main {
+  margin-top: 14rem;
+  padding: 0;
+}
+.pricing .item-pricing main div {
+  margin-bottom: 67rem;
+}
+.pricing .item-pricing main div h3 {
+  font-weight: 700;
+  font-size: var(--text-size-xl);
+  color: var(--custom-white);
+  line-height: 1.5;
+}
+.pricing .item-pricing main div h3 span {
+  text-decoration: none;
+}
+.pricing .item-pricing main div span {
+  color: var(--custom-gray-300);
+  font-weight: 400;
+  font-size: var(--text-size-xxs);
+  text-decoration: underline;
+}
+.pricing .item-pricing main h4 {
+  color: var(--custom-white);
+  font-weight: 700;
+  font-size: var(--text-size-xxs);
+  line-height: 40rem;
+  margin-bottom: 9rem;
+}
+.pricing .item-pricing main p {
+  color: var(--custom-white);
+  font-weight: 400;
+  font-size: var(--text-size-xxs);
+  line-height: 40rem;
+  margin-bottom: 45rem;
+}
+.pricing .item-pricing main .pricing-text-content {
+  color: var(--custom-gray-300);
+  font-weight: 400;
+  font-size: var(--text-size-s);
+  margin-bottom: 53rem;
+  display: block;
+}
+.pricing .item-pricing main ul {
+  margin-top: 18rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}
+.pricing .item-pricing main ul li {
+  color: var(--custom-white);
+  font-weight: 400;
+  font-size: var(--text-size-s);
+  line-height: 36rem;
+  margin-left: 34rem;
+  padding-left: 10rem;
+  list-style-image: url(../assets/Shape-7.png);
+}
+.pricing .item-pricing footer {
+  width: 100%;
+  margin-top: 80rem;
+}
+.pricing .item-pricing footer a {
+  width: 100%;
+  text-align: center;
+  padding: 30rem 0;
+  color: var(--custom-white);
+  font-size: var(--text-size-xs);
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  border: 1rem solid var(--custom-white);
+  background: transparent;
+}
+.pricing .item-pricing.active {
+  background: var(--custom-blue-500);
+}
+.pricing .item-pricing.active p, .pricing .item-pricing.active span {
+  color: var(--custom-white);
+}
+.pricing .item-pricing.active main span {
+  text-decoration: none;
+}
+.pricing .item-pricing.active footer a {
+  background: var(--custom-white);
   color: var(--custom-blue-500);
 }
 
